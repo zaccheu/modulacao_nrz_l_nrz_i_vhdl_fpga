@@ -1,38 +1,47 @@
 # Modulação Digital em VHDL
 
-Trabalho da disciplina de Comunicação de Dados - Sistemas Reconfiguráveis, ministrada pelo professor Vinícius Sebba Borges.
+Trabalho da disciplina de Comunicação de Dados - Sistemas Reconfiguráveis, ministrada pelo professor Vinícius Borges.
 Semestre 2026/1.
 
 ## Integrantes
 
-- (Nome do Integrante 1)
-- (Nome do Integrante 2)
+- Arthur Destro - 081230047
+- Gustavo Zaccheu - 081230023
+- Gustavo Mauriz - 081230040
+- Vinicius Strazzza - 081230036
+- Vitor Barbosa - 081230037
 
 ## Descrição
 
-Este trabalho implementa, em VHDL, dois sistemas de modulação digital: **Unipolar NRZ-L** e **Unipolar NRZ-I**. O código foi simulado no Vivado Simulator e implementado na placa Basys3 (Artix-7 FPGA). Os 16 switches da placa representam a sequência de bits de entrada, e o LED LD0 apresenta o pulso modulado na saída. Um botão (BTNC) inicia a transmissão e outro (BTNU) realiza o reset.
+Este trabalho implementa, em VHDL, dois sistemas de modulação digital: **Unipolar NRZ-L** e **Unipolar NRZ-I**. 
+O código foi simulado no Vivado Simulator e implementado na placa Basys3 (Artix-7 FPGA). Os 16 switches da placa
+representam a sequência de bits de entrada, e o LED LD0 apresenta o pulso modulado na saída. Um botão (BTNC) inicia 
+a transmissão e outro (BTNU) realiza o reset.
 
-Além da implementação obrigatória, ambos os projetos incluem uma atividade extra de saída VGA com cores pulsantes, em que a tela alterna entre barras coloridas conforme o nível do sinal modulado.
+Além da implementação obrigatória, ambos os projetos incluem uma atividade extra de saída VGA com cores pulsantes, 
+em que a tela alterna entre barras coloridas conforme o nível do sinal modulado.
 
 ## Estrutura do repositório
 
 ```
-modulacao_vhdl/
+projeto_vhdl/
 ├── README.md                   ← Você está aqui
 ├── nrz_l/                      Projeto da modulação NRZ-L (auto-contido)
-│   ├── src/                    Código-fonte VHDL do circuito
-│   ├── sim/                    Testbench para simulação
-│   ├── constraints/            Mapeamento dos pinos da FPGA (.xdc)
-│   ├── vivado_project/         Projeto Vivado pronto para abrir
-│   ├── docs/                   Tutoriais e documentação técnica
-│   └── extras/                 Atividades opcionais (VGA)
+│   ├── cache/                  Arquivos temporários/cache do Vivado.
+│   ├── hw/                     Arquivos usados para programar/debugar a FPGA.
+│   ├── ipuser/                 Arquivos gerados por blocos IP do Vivado.
+│   ├── runs/                   Resultado da implementação física na FPGA
+│   ├── sim/					Projeto Vivado pronto para abrir
+│   ├─- srcs/                   Código-fonte VHDL do circuito
+│   └── constraints/            Mapeamento dos pinos da FPGA (.xdc)
 ├── nrz_i/                      Projeto da modulação NRZ-I (auto-contido)
-│   ├── src/                    Código-fonte VHDL do circuito
-│   ├── sim/                    Testbench para simulação
-│   ├── constraints/            Mapeamento dos pinos da FPGA (.xdc)
-│   ├── vivado_project/         Projeto Vivado pronto para abrir
-│   ├── docs/                   Tutoriais e documentação técnica
-│   └── extras/                 Atividades opcionais (VGA)
+│   ├── cache/                  Arquivos temporários/cache do Vivado.
+│   ├── hw/                     Arquivos usados para programar/debugar a FPGA.
+│   ├── ipuser/                 Arquivos gerados por blocos IP do Vivado.
+│   ├── runs/                   Resultado da implementação física na FPGA
+│   ├── sim/					Projeto Vivado pronto para abrir
+│   ├─- srcs/                   Código-fonte VHDL do circuito
+│   └── constraints/            Mapeamento dos pinos da FPGA (.xdc)
 └── relatorio_final/            Relatório técnico consolidado e vídeo demo
 ```
 
